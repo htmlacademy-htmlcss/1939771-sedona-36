@@ -78,48 +78,44 @@
                         </li>
                     </ul>
                 </fieldset>
-            </form>
-            <form class="catalog-filter-houseroom" action="#" method="get">
                 <fieldset class="catalog-filter-houseroom">
-                    <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <ul class="catalog-filter-list">
+                      <li class="catalog-filter-item">
+                          <label class="control">
+                              <input class="control-input" type="radio" name="houseroom-type" value="hotel">
+                              <span class="filter-text">Гостиница</span>
+                          </label>
+                      </li>
+                      <li class="catalog-filter-item">
+                          <label class="controls">
+                              <input class="control-input" type="radio" name="houseroom-type" value="motel">
+                              <span class="filter-text">Мотель</span>
+                          </label>
+                      </li>
+                      <li class="catalog-filter-item">
+                          <label class="controls">
+                              <input class="control-input" type="radio" name="houseroom-type" value="apartments">
+                              <span class="filter-text">Апартаменты</span>
+                          </label>
+                      </li>
+                  </ul>
+              </fieldset>
+              <fieldset class="catalog-filter-price">
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
-                            <label class="control">
-                                <input class="control-input" type="radio" name="houseroom-type" value="hotel">
-                                <span class="filter-text">Гостиница</span>
+                            <label class="controls">
+                                <input class="control-input" type="text" name="min-price" placeholder="от" value="0">
                             </label>
                         </li>
                         <li class="catalog-filter-item">
                             <label class="controls">
-                                <input class="control-input" type="radio" name="houseroom-type" value="motel">
-                                <span class="filter-text">Мотель</span>
-                            </label>
-                        </li>
-                        <li class="catalog-filter-item">
-                            <label class="controls">
-                                <input class="control-input" type="radio" name="houseroom-type" value="apartments">
-                                <span class="filter-text">Апартаменты</span>
+                                <input class="control-input" type="text" name="max-price" placeholder="до" value="9000">
                             </label>
                         </li>
                     </ul>
-                </fieldset>
-            </form>
-            <form class="catalog-filter-price" action="#" method="get">
-                <fieldset class="catalog-filter-price">
-                    <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                        <ul class="catalog-filter-list">
-                            <li class="catalog-filter-item">
-                                <label class="controls">
-                                    <input class="control-input" type="text" name="min-price" placeholder="от" value="0">
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="controls">
-                                    <input class="control-input" type="text" name="max-price" placeholder="до" value="9000">
-                                </label>
-                            </li>
-                        </ul>
-                </fieldset>
+            </fieldset>
             </form>
             <button class="button button-apply" type="button">Применить</button>
             <button class="button button-reset" type="button">Сбросить</button>
@@ -245,7 +241,7 @@
                     <a class="pagination-link" href="">4</a>
                 </li>
                 <li class="pagination-item">
-                    <a class="pagination-link" href="">...</a>
+                    <p class="pagination-dots">...</p>
                 </li>
                 <li class="pagination-item">
                     <a class="pagination-link" href="">10</a>
