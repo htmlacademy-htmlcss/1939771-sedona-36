@@ -6,41 +6,74 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url(../fonts/ptsans-700.woff2) format("woff2");
-  font-display: swap;
+font-family: "PT Sans";
+font-style: normal;
+font-weight: 700;
+src: url(../fonts/ptsans-700.woff2) format("woff2");
+font-display: swap;
 }
+
+html{
+height: 100%;
+}
+
 body{
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #000000;
-  background-color:  #F2F2F2;
+font-family: "PT Sans", sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+color: #000000;
+background:  #F2F2F2;
+display: flex;
+flex-direction: column;
+margin: 0;
+min-height: 100%;
 }
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.main-wrapper{
+width: 1200px;
+margin: 0 auto;
 }
+
+
 
 /* Navigation */
 .page-header{
   color: #000000;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
-.navigation-link{
+.header__navigation{
+  display: flex;
+  align-items: center;
+}
+.navigation__logo{
+  display: block;
+}
+.navigation__list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 339px;
+}
+.navigation__link{
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  color: inherit;
+  color: #000000;
   text-align: center;
   text-decoration: none;
 }
-.navigation-user-link{
+.user__navigation{
+  display: flex;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  width: 268px;
+  list-style: none;
+}
+.user__navigation-link{
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -48,7 +81,7 @@ ul{
   text-decoration: none;
   text-align: center;
 }
-.button-user{
+.user-btn{
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -62,70 +95,91 @@ ul{
 /* Navigation */
 
 
-
-/* Hero */
-.hero{
+/* Main */
+.main-index{
   background-image: url(../images/index-background\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  text-align: center;
-  background-color: #82B3D3;
+  background-color: #F2F2F2;
+}
+/* Main */
+
+
+
+/* Hero */
+.hero{
+/* padding-top: 51px;
+padding-bottom: 82px; */
+  background-image: url(../images/hero\ divider\ \(1\).png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+.hero__image{
+  display: block;
+  margin: 0 auto;
 }
 /* Hero */
 
 
 
 /* Welcome */
-.welcome{
+.weclome{
   text-align: center;
   color: #000000;
   background-color: #ffffff;
 }
-.welcome-title{
+.welcome__title{
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
 }
-.welcome-subtitle{
+.welcome__subtitle{
   font-size: 22px;
   line-height: 26px;
+  color: #333333 ;
 }
-/* Welcome */
+/* Weclome */
 
 
 
-/* About */
+/* Abou*/
 .about{
   text-align: center;
   color: #000000;
   background-color: #ffffff;
 }
-.about-item-title{
+.about__list{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about__item{
+  width: 400px;
+  height: 385px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.about__item--blue{
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+.about-item--lightblue{
+  background-color: rgba(131, 179, 211, 0.2);
+}
+.about__item-image{
+  width: 800px;
+}
+.about__image{
+  height: 100%;
+}
+.about__title{
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-}
-.description-color{
-  color: #333333;
-}
-.about-item:first-child{
-  color: #ffffff;
-  background-color: #82B3D3;
-}
-.about-item:last-child{
-  color: #ffffff;
-  background-color: #82B3D3;
-}
-.about-item:nth-child(3){
-  background-color: rgba(131, 179, 211, 0.12);
-}
-.about-item:nth-child(4){
-  background-color: rgba(131, 179, 211, 0.2);
-}
-.about-item:nth-child(5){
-  background-color: rgba(131, 179, 211, 0.12);
 }
 /* About */
 
@@ -137,51 +191,63 @@ ul{
   color: #000000;
   background-color: #ffffff;
 }
-.adventages-title{
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
+.adventages__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
-.adventages-description{
-  font-size: 22px;
-  line-height: 26px;
-  color: #333333;
+.adventages__item{
+  width: 400px;
+  height: 385px;
 }
-.adventages-item-title{
+.adventages__item-title{
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
 }
-.adventages-item-description{
+.adventages__item-subtitle{
   color: #333333;
 }
-.adventages-item:nth-child(odd){
-  background: rgba(131, 179, 211, 0.12);
+.adventages__item-house{
+  background-color: rgba(131, 179, 211, 0.12);
 }
-/* Adventages */
-
-
-
-/* Search */
-.hotel-search{
-  text-align: center;
-  color: #000000;
-  background-color: #ffffff;
+.adventages__item-souvenir{
+  background-color: rgba(131, 179, 211, 0.12);
 }
-.hotel-search-title{
+.adventages__title{
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
-.hotel-search-description{
+.adventages__subtitle{
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
-.button-hotel-search{
+/* Adventages */
+
+
+/* Search */
+.search{
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+}
+.search__title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.search__subtitle{
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+.btn__search{
   font-family: 'PT Sans',sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -189,9 +255,9 @@ ul{
   color: #fff;
   background-color: #756157;
   text-transform: uppercase;
+  border: none;
 }
 /* Search */
-
 
 
 /* Subscribe */
@@ -199,25 +265,26 @@ ul{
   background-image: url(../images/Subscribe-image.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  color: #fff;
+  color: #ffffff;
+  background-color: #82B3D3;
   text-align: center;
 }
-.subscribe-title{
+.subscribe__title{
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
-.subscribe-description{
+.subscribe__subtitle{
   font-size: 22px;
   line-height: 26px;
 }
-.button-submit{
+.btn__subscribe{
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: #fff;
+  color: #ffffff;
   background-color: #82B3D3;
   text-transform: uppercase;
   border: none;
@@ -225,16 +292,27 @@ ul{
 /* Subscribe */
 
 
-
 /* Page-footer */
-.footer{
+.page-footer{
   color: #000000;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
-.footer-contacts{
+.footer__wrapper{
+  display: flex;
+}
+
+.social__list{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__phone{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
-  color: inherit  ;
+  color: #000000;
 }
 /* Page-footer */
