@@ -16,7 +16,6 @@ font-display: swap;
 html{
 height: 100%;
 }
-
 body{
 font-family: "PT Sans", sans-serif;
 font-size: 18px;
@@ -379,9 +378,9 @@ margin: 0 auto;
   margin-top: 0;
   margin-bottom: 54px;
 }
+
 .subscribe__email{
   display: flex;
-  justify-content: center;
 }
 .email-input{
   width: 458px;
