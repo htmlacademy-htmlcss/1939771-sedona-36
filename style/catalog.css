@@ -320,7 +320,7 @@ body{
   opacity: 0.6;
 }
 .infrastructre-control:focus .infrastructre-mark{
-  outline: 3px solid #82B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
   opacity: 1;
 }
 .infrastructre-control:active .infrastructre-mark{
@@ -410,8 +410,11 @@ body{
 }
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button{
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+.price-input{
+  -moz-appearance:textfield;
 }
 .price-text{
   position: absolute;
@@ -440,7 +443,7 @@ body{
 }
 .price-min:focus{
   background-color: #E6E6E6;
-  outline: 3px solid #82B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 .price-min:active{
   background-color: #E6E6E6;
@@ -462,7 +465,7 @@ body{
 }
 .price-max:focus{
   background-color: #E6E6E6;
-  outline: 3px solid #82B3D3;
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 .price-max:active{
   background-color: #E6E6E6;
@@ -566,7 +569,7 @@ body{
   opacity: 0.6;
 }
 .filter__btn-reset:focus{
-  outline: 3px solid #68A2CA;
+  box-shadow: inset 0 0 0 3px #83B3D3;
   border-radius: 4px;
 }
 .filter__btn-reset:active{
@@ -684,7 +687,6 @@ body{
 .product__list{
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  grid-template-rows: 438px;
   gap: 20px;
   /* display: flex;
   flex-wrap: wrap; */
@@ -701,7 +703,7 @@ body{
   gap: 16px 20px;
   /* margin-bottom: 20px;
   margin-right: 20px; */
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -1000,8 +1002,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 45px;
+  padding-bottom: 35px;
   padding-left: 70px;
   padding-right: 70px;
 }
@@ -1058,30 +1060,6 @@ body{
 .social__link:active .social-icon{
   fill: rgba(104, 162, 202, 0.3);
 }
-/* .vk-icon{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.telegram-icon{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.youtube-icon{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
 .footer__phone{
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
@@ -1100,3 +1078,6 @@ body{
   color: rgba(117, 97, 87, 0.3);
 }
 /* Page-footer */
+
+
+
