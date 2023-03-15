@@ -887,6 +887,7 @@ body{
   min-height: 60px;
   padding: 12px;
   box-sizing: border-box;
+  border: 1px solid transparent;
 }
 .pagination__link--blue:hover{
   background-color: #68A2CA;
