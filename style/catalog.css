@@ -874,6 +874,7 @@ body{
 }
 .pagination__item:nth-child(6){
   margin-right: 0px;
+
 }
 .pagination__link{
   display: block;
