@@ -220,7 +220,7 @@ margin: 0 auto;
 .hero{
   padding-top: 51px;
   padding-bottom: 82px;
-  background-image: url(../images/hero-divider\ .png);
+  background-image: url(../images/hero-devider.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom;
@@ -471,7 +471,7 @@ margin: 0 auto;
 
 /* Subscribe */
 .subscribe{
-  background-image: url(../images/subscribe-image.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   color: #ffffff;
@@ -765,7 +765,6 @@ margin: 0 auto;
   margin-bottom: 32px;
 }
 .filter__text{
-  display: block;
   line-height: 23px;
   color: #FFFFFF;
   padding-left: 36px;
@@ -806,7 +805,7 @@ margin: 0 auto;
   background-color: #3F5E72;
 }
 .infrastructre-input[type="checkbox"]:checked + .infrastructre-mark::after{
-  content: "\2212";
+  content: "";
   position: absolute;
   width: 12px;
   height: 2px;
@@ -815,10 +814,10 @@ margin: 0 auto;
   transform: rotate(309deg);
   background-color: #3F5E72;
 }
-.infrastructre-control:hover {
+.infrastructre-control:hover .infrastructre-mark{
   opacity: 0.6;
 }
-.infrastructre-control:focus .infrastructre-mark{
+.infrastructre-control:focus-within .infrastructre-mark{
   outline: 3px solid #83B3D3;
 }
 .infrastructre-control:active .infrastructre-mark{
@@ -862,9 +861,8 @@ margin: 0 auto;
 .house-control:hover{
   opacity: 0.6;
 }
-.house-control:focus .house-mark{
+.house-control:focus-within .house-mark{
   outline: 3px solid #82B3D3;
-  opacity: 1;
 }
 .house-control:active .house-mark{
   outline: 2px solid #82B3D3;
@@ -1102,6 +1100,7 @@ margin: 0 auto;
   background-image: url(../images/icon/arrow-select.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: #FFFFFF;
   padding: 12px 20px;
   padding-right: 40px;
   border: 2px solid #E5E5E5;
@@ -1474,7 +1473,9 @@ margin: 0 auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  z-index: 1;
+  overflow: hidden;
+  max-width: 413px;
+  max-height: 36px;
 
 text-transform: uppercase;
 }
@@ -1501,6 +1502,9 @@ text-transform: uppercase;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  max-width: 120px;
+  max-height: 24px;
+  overflow: hidden;
 }
 .arrival-input,
 .departure-input{
@@ -1549,6 +1553,12 @@ text-transform: uppercase;
   font-size: 16px;
   line-height: 21px;
 }
+.arrival-subtitle{
+  color: #FF5757;
+  margin-top: 4px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
 .departure-control::after{
   content: "На эти даты есть свободные номера. Пока есть.";
   position: absolute;
@@ -1567,6 +1577,9 @@ text-transform: uppercase;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  max-width: 120px;
+  max-height: 24px;
+  overflow: hidden;
 }
 .form-wrapper{
   display: flex;
@@ -1590,6 +1603,9 @@ text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  max-width: 100px;
+  max-height: 24px;
+  overflow: hidden;
 }
 .children-wrapper{
   display: flex;
@@ -1601,6 +1617,9 @@ text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  max-width: 50px;
+  max-height: 24px;
+  overflow: hidden;
 }
 .button-info{
   position: relative;
